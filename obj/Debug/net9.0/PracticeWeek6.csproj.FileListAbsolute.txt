@@ -1,0 +1,14 @@
+/Users/dduarte/Projects/CSharp/PracticeWeek6/bin/Debug/net9.0/PracticeWeek6
+/Users/dduarte/Projects/CSharp/PracticeWeek6/bin/Debug/net9.0/PracticeWeek6.deps.json
+/Users/dduarte/Projects/CSharp/PracticeWeek6/bin/Debug/net9.0/PracticeWeek6.runtimeconfig.json
+/Users/dduarte/Projects/CSharp/PracticeWeek6/bin/Debug/net9.0/PracticeWeek6.dll
+/Users/dduarte/Projects/CSharp/PracticeWeek6/bin/Debug/net9.0/PracticeWeek6.pdb
+/Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/PracticeWeek6.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/PracticeWeek6.AssemblyInfoInputs.cache
+/Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/PracticeWeek6.AssemblyInfo.cs
+/Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/PracticeWeek6.csproj.CoreCompileInputs.cache
+/Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/PracticeWeek6.dll
+/Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/refint/PracticeWeek6.dll
+/Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/PracticeWeek6.pdb
+/Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/PracticeWeek6.genruntimeconfig.cache
+/Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/ref/PracticeWeek6.dll
