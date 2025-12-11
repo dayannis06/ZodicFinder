@@ -12,3 +12,4 @@
 /Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/PracticeWeek6.pdb
 /Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/PracticeWeek6.genruntimeconfig.cache
 /Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/ref/PracticeWeek6.dll
+/Users/dduarte/Projects/CSharp/PracticeWeek6/obj/Debug/net9.0/PracticeWeek6.sourcelink.json

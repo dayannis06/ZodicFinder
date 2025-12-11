@@ -1,5 +1,7 @@
 ﻿Console.WriteLine("= Zodiac Sign Finder =");
 string input;
+string zodiac;
+string chineseAnimal;
     while (true)
 {
     Console.Write("Please enter your birthday (mm/dd/yyyy): ");
@@ -15,31 +17,54 @@ string input;
         Console.WriteLine("Only digits and '/' are allowed. Try again.");
         continue;
     }
-    break;
-}
-bool IsValidInput(string input)
-{
-    foreach (char c in input)
+    try
     {
-        if (!char.IsDigit(c) && c != '/')
+        string[] parts = input.Split('/');
+
+        if (parts.Length != 3)
         {
-            return false;
+            throw new IndexOutOfRangeException("The date must contain 3 parts: mm/dd/yyyy");
         }
+
+        int month = int.Parse(parts[0]);
+        int day = int.Parse(parts[1]);
+        int year = int.Parse(parts[2]);
+
+        if (month < 1 || month > 12)
+        {
+            throw new ArgumentOutOfRangeException("mm", "Month must be between 1 and 12.");
+        }
+
+        if (day < 1 || day > 31)
+        {
+            throw new ArgumentOutOfRangeException("dd", "Day must be between 1 and 31.");
+        }
+
+        zodiac = GetZodiacSign(month, day);
+        chineseAnimal = GetChineseZodiac(year);
+
+        Console.WriteLine($"\nYour zodiac sign is: {zodiac}");
+        Console.WriteLine($"Your Chinese zodiac animal is: {chineseAnimal}");
+
+        break;
     }
-
-    return true;
+    catch (FormatException)
+    {
+        Console.WriteLine("One of the date components is not a valid number. Try again.");
+    }
+    catch (IndexOutOfRangeException)
+    {
+        Console.WriteLine("Date format is invalid. Please use mm/dd/yyyy.");
+    }
+    catch (ArgumentOutOfRangeException ex)
+    {
+        Console.WriteLine($"Invalid value: {ex.Message}");
+    }
+    catch (Exception ex)
+   {
+    Console.WriteLine($"An error occurred: {ex.Message}. Please enter a valid date.");
+   }
 }
-
-string[] parts = input.Split('/');
-int month = int.Parse(parts[0]);
-int day = int.Parse(parts[1]);
-int year = int.Parse(parts[2]);
-
-string zodiac = GetZodiacSign(month, day);
-string chineseAnimal = GetChineseZodiac(year);
-
-Console.WriteLine($"\nYour zodiac sign is: {zodiac}");
-Console.WriteLine($"Your Chinese zodiac animal is: {chineseAnimal}");
 
 string[] signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
 string[] descriptions =
@@ -68,6 +93,18 @@ string[] descriptions =
 
 Console.WriteLine("\nThank you for using the Zodiac Finder!");
 
+bool IsValidInput(string input)
+{
+    foreach (char c in input)
+    {
+        if (!char.IsDigit(c) && c != '/')
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
 string GetZodiacSign(int month, int day)
 {
     switch (month)
